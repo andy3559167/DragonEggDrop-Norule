@@ -6,7 +6,7 @@ This Minecraft (Bukkit) plugin is a fork of NinjaStix's original, open sourced D
 For information about the plugin and how to use it, please see either the [GitHub Wiki](https://github.com/2008Choco/DragonEggDrop/wiki/) or the plugin's [resource page on SpigotMC](https://www.spigotmc.org/resources/133579/).
 ## Credits
 
-- Original author: NinjaStix
-- Revival author: Parker Hawke - Choco
+- Original author: [NinjaStix](https://gitlab.com/xPixelRagex/DragonEggDrop/)
+- Revival author: [Parker Hawke - Choco](https://github.com/2008Choco/DragonEggDrop)
 - Current maintainer: Andy
 
