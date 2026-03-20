@@ -8,7 +8,7 @@ metrics: true
 lightning:
   # The amount of lightning bolts to summon when the loot has been generated.
   amount: 4
-
+  
   # Whether or not the lightning will damage nearby entities
   damages-entities: false
 
@@ -43,19 +43,19 @@ respawn-messages:
   messages:
   - '&6Dragon respawning in &e%dragoneggdrop_respawn_time%'
   - '&eDragon respawning in &6%dragoneggdrop_respawn_time%'
-
+  
   # Whether or not the %dragoneggdrop_respawn_time% placeholder should be condensed.
   # false: "1 week, 2 days, 3 hours, 4 minutes, 5 seconds"
   # true: "1w, 2d, 3h, 4m, 5s"
   condensed: false
-
+  
   # The time units to omit from the %dragoneggdrop_respawn_time% placeholder. Example:
   # omit-time-units:
   # - "seconds"
   # - "minutes"
   # Accepted values are "seconds", "minutes", "hours" and "days". Weeks cannot be omitted.
   omit-time-units: []
-
+  
   # The radius, relative to the centre of the end portal, required for players to receive the respawn countdown message.
   # If set to -1, all players in the end will receive the action bar.
   radius: -1

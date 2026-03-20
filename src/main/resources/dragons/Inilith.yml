@@ -1,4 +1,4 @@
-dragon-name: "&5Inilth, Lord of Fire"
+dragon-name: '&5Inilth, Lord of Fire'
 bar-style: SEGMENTED_12
 bar-color: RED
 
@@ -9,5 +9,5 @@ attributes:
   GENERIC_ARMOR: 10
   GENERIC_ATTACK_DAMAGE: 6
 
-particles: "helix"
-loot: "very_rare_dragon"
+particles: helix
+loot: very_rare_dragon

@@ -1,0 +1,29 @@
+# Example condition definitions for particle equations.
+# NOTE: Files with the base name "possible_conditions" are ignored by DragonEggDrop's parser.
+
+equations:
+- conditions:
+  - name: always_true
+  - name: x_position
+    operation: =
+    arguments:
+      value: 16.0
+  - name: z_position
+    operation: '>'
+    arguments:
+      value: 16.0
+  - name: y_position
+    operation: less_than
+    arguments:
+      value: 128.0
+  - name: t
+    operation: greater_than
+    arguments:
+      value: 300.0
+  - name: theta
+    operation: <
+    arguments:
+      value: 180.0
+  - name: world
+    arguments:
+      value: world_the_end

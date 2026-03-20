@@ -1,8 +1,8 @@
-dragon-name: "&bFalcor"
+dragon-name: '&bFalcor'
 bar-style: SOLID
 bar-color: RED
 
 spawn-weight: 2
 
-particles: "ball"
-loot: "common_dragon"
+particles: ball
+loot: common_dragon

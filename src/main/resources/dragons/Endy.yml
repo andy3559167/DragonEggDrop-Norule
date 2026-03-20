@@ -1,8 +1,8 @@
-dragon-name: "&aEndy"
+dragon-name: '&aEndy'
 bar-style: SOLID
 bar-color: PINK
 
 spawn-weight: 2
 
-particles: "ball"
-loot: "common_dragon"
+particles: ball
+loot: common_dragon

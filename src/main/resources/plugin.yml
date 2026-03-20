@@ -1,26 +1,39 @@
 name: ${project.name}
-main: wtf.choco.dragoneggdrop.DragonEggDrop
+main: com.norule.dragoneggdrop.DragonEggDrop
 version: ${project.version}
 description: ${project.description}
-softdepend: [PlaceholderAPI, Multiverse-Core]
-author: Choco
-contributors: [NinjaStix, Photon]
-api-version: 1.16
+softdepend:
+- PlaceholderAPI
+- Multiverse-Core
+author: Andy
+contributors:
+- NinjaStix
+- Choco
+- Photon
+api-version: 1.21
+folia-supported: true
 
 commands:
   dragoneggdrop:
     description: The main DragonEggDrop command
     usage: /<command> [help]
-    aliases: [ded]
+    aliases:
+    - ded
   dragonrespawn:
     description: Functionality to manipulate the dragon respawn process
     usage: /<command> <stop|start|template|history>
-    aliases: [respawndragon, dragonspawn, spawndragon]
+    aliases:
+    - respawndragon
+    - dragonspawn
+    - spawndragon
     permission: dragoneggdrop.command.respawn
   dragontemplate:
     description: A utility command to control dragon templates
     usage: /<command> <template> <view|edit>
-    aliases: [dragontemplates, template, templates]
+    aliases:
+    - dragontemplates
+    - template
+    - templates
     permission: dragoneggdrop.command.template
   dragonparticle:
     description: A utility command to play particle shapes
@@ -28,41 +41,57 @@ commands:
     permission: dragoneggdrop.command.particle
 
 permissions:
-  dragoneggdrop.*:
-    description: Allow access to all dragoneggdrop features
-    default: op
-    children:
-      dragoneggdrop.command.*: true
-      dragoneggdrop.overridecrystals: false
+  dragoneggdrop:
+    '*':
+      description: Allow access to all dragoneggdrop features
+      default: op
+      children:
+        dragoneggdrop:
+          command:
+            '*': true
+          overridecrystals: false
+    command:
+      
+      '*':
+        description: Allow access to all commands in dragoneggdrop
+        default: op
+        children:
+          dragoneggdrop:
+            command:
+              reload: true
+              respawn:
+                '*': true
+              template:
+                '*': true
+              history: true
+              particle: true
+      respawn:
+        
+        '*':
+          description: Allow access to all /dragonrespawn subcommands
+          default: op
+          children:
+            dragoneggdrop:
+              command:
+                respawn:
+                  stop: true
+                  start: true
+                  template: true
+      template:
+        
+        '*':
+          description: Allow access to the details of all loaded dragon templates
+          default: op
+          children:
+            dragoneggdrop:
+              command:
+                template:
+                  list: true
+                  info: true
+                  generateloot: true
+    
+    overridecrystals:
+      description: Override the allow-crystal-respawns configuration option and grant
+        the ability to spawn dragons using crystals
+      default: false
 
-  dragoneggdrop.command.*:
-    description: Allow access to all commands in dragoneggdrop
-    default: op
-    children:
-      dragoneggdrop.command.reload: true
-      dragoneggdrop.command.respawn: true
-      dragoneggdrop.command.respawn.*: true
-      dragoneggdrop.command.template: true
-      dragoneggdrop.command.template.*: true
-      dragoneggdrop.command.history: true
-      dragoneggdrop.command.particle: true
-
-  dragoneggdrop.overridecrystals:
-    description: Override the allow-crystal-respawns configuration option and grant the ability to spawn dragons using crystals
-    default: false
-
-  dragoneggdrop.command.respawn.*:
-    description: Allow access to all /dragonrespawn subcommands
-    default: op
-    children:
-      dragoneggdrop.command.respawn.stop: true
-      dragoneggdrop.command.respawn.start: true
-      dragoneggdrop.command.respawn.template: true
-
-  dragoneggdrop.command.template.*:
-    description: Allow access to the details of all loaded dragon templates
-    default: op
-    children:
-      dragoneggdrop.command.template.list: true
-      dragoneggdrop.command.template.info: true
-      dragoneggdrop.command.template.generateloot: true

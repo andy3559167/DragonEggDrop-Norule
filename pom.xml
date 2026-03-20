@@ -3,9 +3,9 @@
 	"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>wtf.choco</groupId>
+  <groupId>com.norule</groupId>
   <artifactId>DragonEggDrop</artifactId>
-  <version>1.9.2</version>
+  <version>2.0.0</version>
   <name>DragonEggDrop</name>
   <description>Reward your players with a dragon egg and/or loot chest after every Ender Dragon battle in a grand fashion</description>
 
@@ -77,11 +77,7 @@
           <relocations>
             <relocation>
               <pattern>org.bstats</pattern>
-              <shadedPattern>wtf.choco.dragoneggdrop.metrics</shadedPattern>
-            </relocation>
-            <relocation>
-              <pattern>wtf.choco.commons</pattern>
-              <shadedPattern>wtf.choco.dragoneggdrop.commons</shadedPattern>
+              <shadedPattern>com.norule.dragoneggdrop.metrics</shadedPattern>
             </relocation>
           </relocations>
         </configuration>
@@ -127,7 +123,7 @@
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot-api</artifactId>
-      <version>1.16.1-R0.1-SNAPSHOT</version>
+      <version>1.21-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
 
@@ -137,25 +133,17 @@
       <version>20.1.0</version>
       <scope>provided</scope>
     </dependency>
-
     <dependency>
       <groupId>org.bstats</groupId>
       <artifactId>bstats-bukkit</artifactId>
-      <version>2.2.1</version>
-      <scope>compile</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.github.2008Choco</groupId>
-      <artifactId>ChocoCommons</artifactId>
-      <version>847194b904</version>
+      <version>3.2.1</version>
       <scope>compile</scope>
     </dependency>
 
     <dependency>
       <groupId>me.clip</groupId>
       <artifactId>placeholderapi</artifactId>
-      <version>2.10.8</version>
+      <version>2.11.7</version>
       <scope>provided</scope>
     </dependency>
 
@@ -174,3 +162,4 @@
     </dependency>
   </dependencies>
 </project>
+

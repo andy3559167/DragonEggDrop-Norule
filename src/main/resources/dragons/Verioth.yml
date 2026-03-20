@@ -1,4 +1,4 @@
-dragon-name: "&2Verioth the Chosen"
+dragon-name: '&2Verioth the Chosen'
 bar-style: SEGMENTED_10
 bar-color: GREEN
 
@@ -8,5 +8,5 @@ attributes:
   GENERIC_MAX_HEALTH: 400
   GENERIC_ARMOR: 5
 
-particles: "helix"
-loot: "rare_dragon"
+particles: helix
+loot: rare_dragon
